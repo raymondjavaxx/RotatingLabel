@@ -1,0 +1,13 @@
+opt_in_rules:
+  - missing_docs
+
+line_length:
+  warning: 130
+  error: 150
+  ignores_urls: true
+  ignores_comments: true
+
+identifier_name:
+  excluded:
+    - x
+    - y
