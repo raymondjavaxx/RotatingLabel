@@ -6,11 +6,13 @@
 //
 
 import XCTest
-@testable import RotatingLabel
+import RotatingLabel
 
 final class DiffingFunctionTests: XCTestCase {
+
     func test_diff() {
-        let operations = DiffingFunction.default(from: "20.00", to: "21.00")
+        let diff = DiffingFunction.default
+        let operations = diff(from: "20.00", to: "21.00")
         XCTAssertEqual(operations, [
             .remove(offset: 1, element: "0"),
             .insert(offset: 1, element: "1")
@@ -18,7 +20,8 @@ final class DiffingFunctionTests: XCTestCase {
     }
 
     func test_diff_onlyInserts() {
-        let operations = DiffingFunction.default(from: "", to: "20.00")
+        let diff = DiffingFunction.default
+        let operations = diff(from: "", to: "20.00")
         XCTAssertEqual(operations, [
             .insert(offset: 0, element: "2"),
             .insert(offset: 1, element: "0"),
@@ -29,7 +32,8 @@ final class DiffingFunctionTests: XCTestCase {
     }
 
     func test_diff_removalShouldBeInReverseOrder() {
-        let operations = DiffingFunction.default(from: "20.00", to: "")
+        let diff = DiffingFunction.default
+        let operations = diff(from: "20.00", to: "")
         XCTAssertEqual(operations, [
             .remove(offset: 4, element: "0"),
             .remove(offset: 3, element: "0"),
@@ -55,4 +59,5 @@ final class DiffingFunctionTests: XCTestCase {
 
         XCTAssertEqual(String(result), target)
     }
+
 }

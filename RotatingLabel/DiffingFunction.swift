@@ -22,10 +22,14 @@ public struct DiffingFunction {
     public init(_ diff: @escaping (String, String) -> [Operation]) {
         self.diff = diff
     }
-}
 
-extension DiffingFunction {
-    func callAsFunction(from oldValue: String, to newValue: String) -> [Operation] {
+    /// Calls the diff function.
+    ///
+    /// - Parameters:
+    ///   - oldValue: Old value.
+    ///   - newValue: New value.
+    /// - Returns: The difference between old value and new value.
+    public func callAsFunction(from oldValue: String, to newValue: String) -> [Operation] {
         return self.diff(oldValue, newValue)
     }
 }
