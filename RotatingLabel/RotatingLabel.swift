@@ -82,7 +82,11 @@ public class RotatingLabel: UIView {
         initialVelocity: CGVector(dx: 4.8, dy: 4.8)
     )
 
-    private var internalValue: String?
+    private var internalValue: String? {
+        didSet {
+            accessibilityLabel = internalValue
+        }
+    }
 
     private var labels: [UILabel] = []
 
@@ -96,6 +100,21 @@ public class RotatingLabel: UIView {
         }
 
         return CGSize(width: width, height: height)
+    }
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    func setup() {
+        isAccessibilityElement = true
+        accessibilityTraits = .staticText
     }
 
     /// Sets the value of the label.

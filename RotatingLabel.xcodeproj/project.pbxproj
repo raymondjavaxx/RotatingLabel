@@ -13,6 +13,7 @@
 		F68D39FF29C2DA7E00EDB5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68D39FE29C2DA7E00EDB5BA /* Assets.xcassets */; };
 		F68D3A0229C2DA7E00EDB5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68D3A0029C2DA7E00EDB5BA /* LaunchScreen.storyboard */; };
 		F68D3A2A29C3D84C00EDB5BA /* DiffingFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */; };
+		F6B46CBE29CCCF210052593C /* RotatingLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B46CBD29CCCF210052593C /* RotatingLabelTests.swift */; };
 		F6FF473A29CB858D006940E5 /* RotatingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F6FF473929CB858D006940E5 /* RotatingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6FF473D29CB858D006940E5 /* RotatingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FF473729CB858D006940E5 /* RotatingLabel.framework */; };
 		F6FF473E29CB858D006940E5 /* RotatingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6FF473729CB858D006940E5 /* RotatingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -63,6 +64,7 @@
 		F68D3A2529C2DAA300EDB5BA /* RotatingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingLabel.swift; sourceTree = "<group>"; };
 		F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingFunctionTests.swift; sourceTree = "<group>"; };
 		F68D3A2B29C3E1B500EDB5BA /* DiffingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingFunction.swift; sourceTree = "<group>"; };
+		F6B46CBD29CCCF210052593C /* RotatingLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingLabelTests.swift; sourceTree = "<group>"; };
 		F6FF473729CB858D006940E5 /* RotatingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RotatingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FF473929CB858D006940E5 /* RotatingLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotatingLabel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 		F68D3A0B29C2DA7E00EDB5BA /* RotatingLabelTests */ = {
 			isa = PBXGroup;
 			children = (
+				F6B46CBD29CCCF210052593C /* RotatingLabelTests.swift */,
 				F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */,
 			);
 			path = RotatingLabelTests;
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B46CBE29CCCF210052593C /* RotatingLabelTests.swift in Sources */,
 				F68D3A2A29C3D84C00EDB5BA /* DiffingFunctionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
