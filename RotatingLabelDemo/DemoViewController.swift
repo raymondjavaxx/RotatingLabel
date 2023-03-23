@@ -41,6 +41,7 @@ final class DemoViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
+        view.directionalLayoutMargins = .init(top: 16, leading: 16, bottom: 16, trailing: 16)
 
         rotatingLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(rotatingLabel)
