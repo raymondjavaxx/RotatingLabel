@@ -1,5 +1,7 @@
 # RotatingLabel
 
+![](assets/rotating_label.gif)
+
 RotatingLabel is a label that animates text changes by scrolling characters. The component is designed for presenting numeric values, such as account balances and stock prices, but it can be used for any text, although not ideal.
 
 ## Installation
