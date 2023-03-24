@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6FF473629CB858D006940E5"
-               BuildableName = "RotatingLabel.framework"
-               BlueprintName = "RotatingLabel"
+               BlueprintIdentifier = "F68D39F129C2DA7D00EDB5BA"
+               BuildableName = "RotatingLabelDemo.app"
+               BlueprintName = "RotatingLabelDemo"
                ReferencedContainer = "container:RotatingLabel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F68D3A0729C2DA7E00EDB5BA"
-               BuildableName = "RotatingLabelTests.xctest"
-               BlueprintName = "RotatingLabelTests"
-               ReferencedContainer = "container:RotatingLabel.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F68D39F129C2DA7D00EDB5BA"
+            BuildableName = "RotatingLabelDemo.app"
+            BlueprintName = "RotatingLabelDemo"
+            ReferencedContainer = "container:RotatingLabel.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,15 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6FF473629CB858D006940E5"
-            BuildableName = "RotatingLabel.framework"
-            BlueprintName = "RotatingLabel"
+            BlueprintIdentifier = "F68D39F129C2DA7D00EDB5BA"
+            BuildableName = "RotatingLabelDemo.app"
+            BlueprintName = "RotatingLabelDemo"
             ReferencedContainer = "container:RotatingLabel.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

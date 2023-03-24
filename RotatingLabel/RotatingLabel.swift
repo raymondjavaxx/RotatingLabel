@@ -102,6 +102,10 @@ public class RotatingLabel: UIView {
         return CGSize(width: width, height: height)
     }
 
+    public override func sizeThatFits(_ size: CGSize) -> CGSize {
+        return intrinsicContentSize
+    }
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()

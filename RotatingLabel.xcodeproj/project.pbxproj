@@ -13,6 +13,8 @@
 		F68D39FF29C2DA7E00EDB5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68D39FE29C2DA7E00EDB5BA /* Assets.xcassets */; };
 		F68D3A0229C2DA7E00EDB5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68D3A0029C2DA7E00EDB5BA /* LaunchScreen.storyboard */; };
 		F68D3A2A29C3D84C00EDB5BA /* DiffingFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */; };
+		F6B43F3829CD1FA9008A771B /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = F6B43F3729CD1FA9008A771B /* SnapshotTesting */; };
+		F6B43F3A29CD1FD0008A771B /* RotatingLabelSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B43F3929CD1FD0008A771B /* RotatingLabelSnapshotTests.swift */; };
 		F6B46CBE29CCCF210052593C /* RotatingLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B46CBD29CCCF210052593C /* RotatingLabelTests.swift */; };
 		F6FF473A29CB858D006940E5 /* RotatingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F6FF473929CB858D006940E5 /* RotatingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6FF473D29CB858D006940E5 /* RotatingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FF473729CB858D006940E5 /* RotatingLabel.framework */; };
@@ -64,6 +66,7 @@
 		F68D3A2529C2DAA300EDB5BA /* RotatingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingLabel.swift; sourceTree = "<group>"; };
 		F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingFunctionTests.swift; sourceTree = "<group>"; };
 		F68D3A2B29C3E1B500EDB5BA /* DiffingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingFunction.swift; sourceTree = "<group>"; };
+		F6B43F3929CD1FD0008A771B /* RotatingLabelSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingLabelSnapshotTests.swift; sourceTree = "<group>"; };
 		F6B46CBD29CCCF210052593C /* RotatingLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingLabelTests.swift; sourceTree = "<group>"; };
 		F6FF473729CB858D006940E5 /* RotatingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RotatingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FF473929CB858D006940E5 /* RotatingLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotatingLabel.h; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B43F3829CD1FA9008A771B /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +102,9 @@
 		F68D39E929C2DA7D00EDB5BA = {
 			isa = PBXGroup;
 			children = (
-				F68D39F429C2DA7D00EDB5BA /* RotatingLabelDemo */,
-				F68D3A0B29C2DA7E00EDB5BA /* RotatingLabelTests */,
 				F6FF473829CB858D006940E5 /* RotatingLabel */,
+				F68D3A0B29C2DA7E00EDB5BA /* RotatingLabelTests */,
+				F68D39F429C2DA7D00EDB5BA /* RotatingLabelDemo */,
 				F68D39F329C2DA7D00EDB5BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,6 +137,7 @@
 			children = (
 				F6B46CBD29CCCF210052593C /* RotatingLabelTests.swift */,
 				F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */,
+				F6B43F3929CD1FD0008A771B /* RotatingLabelSnapshotTests.swift */,
 			);
 			path = RotatingLabelTests;
 			sourceTree = "<group>";
@@ -194,6 +199,9 @@
 				F68D3A0A29C2DA7E00EDB5BA /* PBXTargetDependency */,
 			);
 			name = RotatingLabelTests;
+			packageProductDependencies = (
+				F6B43F3729CD1FA9008A771B /* SnapshotTesting */,
+			);
 			productName = RotatingLabelTests;
 			productReference = F68D3A0829C2DA7E00EDB5BA /* RotatingLabelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -246,6 +254,9 @@
 				Base,
 			);
 			mainGroup = F68D39E929C2DA7D00EDB5BA;
+			packageReferences = (
+				F6B43F3629CD1FA9008A771B /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = F68D39F329C2DA7D00EDB5BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B46CBE29CCCF210052593C /* RotatingLabelTests.swift in Sources */,
+				F6B43F3A29CD1FD0008A771B /* RotatingLabelSnapshotTests.swift in Sources */,
 				F68D3A2A29C3D84C00EDB5BA /* DiffingFunctionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macropoetry.RotatingLabelDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabelDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -503,7 +515,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macropoetry.RotatingLabelDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabelDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -521,7 +533,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macropoetry.RotatingLabelTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -539,7 +551,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macropoetry.RotatingLabelTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -567,7 +579,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macropoetry.RotatingLabel;
+				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabel;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -598,7 +610,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macropoetry.RotatingLabel;
+				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabel;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -649,6 +661,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6B43F3629CD1FA9008A771B /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6B43F3729CD1FA9008A771B /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B43F3629CD1FA9008A771B /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F68D39EA29C2DA7D00EDB5BA /* Project object */;
 }
