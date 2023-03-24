@@ -31,6 +31,13 @@ final class RotatingLabelSnapshotTests: XCTestCase {
         assertSnapshot(matching: sut, as: .image(traits: .init(preferredContentSizeCategory: .extraExtraExtraLarge)))
     }
 
+    func test_textColor() {
+        let sut = makeSUT()
+        sut.text = "$1399.99"
+        sut.textColor = .blue
+        assertSnapshot(matching: sut, as: .image)
+    }
+
 }
 
 private extension RotatingLabelSnapshotTests {
