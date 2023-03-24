@@ -12,13 +12,13 @@ final class RotatingLabelTests: XCTestCase {
 
     func test_value_shouldSetAccessibilityLabel() {
         let sut = makeSUT()
-        sut.value = "$250.00"
+        sut.text = "$250.00"
         XCTAssertEqual(sut.accessibilityLabel, "$250.00")
     }
 
     func test_setValue_shouldSetAccessibilityLabel() {
         let sut = makeSUT()
-        sut.setValue("$500.00", animated: true)
+        sut.setText("$500.00", animated: true)
         XCTAssertEqual(sut.accessibilityLabel, "$500.00")
     }
 

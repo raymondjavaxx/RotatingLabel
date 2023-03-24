@@ -16,7 +16,7 @@ final class DemoViewController: UIViewController {
         let label = RotatingLabel()
         label.adjustsFontForContentSizeCategory = true
         label.font = .preferredFont(forTextStyle: .title1)
-        label.value = formatter.string(for: value)
+        label.text = formatter.string(for: value)
         return label
     }()
 
@@ -68,6 +68,6 @@ final class DemoViewController: UIViewController {
 
         value += delta
 
-        rotatingLabel.setValue(formatter.string(for: value), animated: true, direction: direction)
+        rotatingLabel.setText(formatter.string(for: value), animated: true, direction: direction)
     }
 }

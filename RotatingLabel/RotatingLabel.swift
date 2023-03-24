@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// A label that animates when its value changes.
+/// A label that animates when its text changes.
 public class RotatingLabel: UIView {
     /// Direction of the animation.
     public enum Direction {
@@ -57,11 +57,11 @@ public class RotatingLabel: UIView {
     /// Function to use for diffing the old and new values.
     public var diffingFunction: DiffingFunction = .default
 
-    /// The current value.
-    public var value: String? {
-        get { internalValue }
+    /// The current text.
+    public var text: String? {
+        get { internalText }
         set {
-            setValue(newValue ?? "", animated: false)
+            setText(newValue ?? "", animated: false)
         }
     }
 
@@ -82,14 +82,6 @@ public class RotatingLabel: UIView {
         initialVelocity: CGVector(dx: 4.8, dy: 4.8)
     )
 
-    private var internalValue: String? {
-        didSet {
-            accessibilityLabel = internalValue
-        }
-    }
-
-    private var labels: [UILabel] = []
-
     public override var intrinsicContentSize: CGSize {
         var width = CGFloat.zero
         var height = CGFloat.zero
@@ -106,6 +98,14 @@ public class RotatingLabel: UIView {
         return intrinsicContentSize
     }
 
+    private var internalText: String? {
+        didSet {
+            accessibilityLabel = internalText
+        }
+    }
+
+    private var labels: [UILabel] = []
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -121,32 +121,32 @@ public class RotatingLabel: UIView {
         accessibilityTraits = .staticText
     }
 
-    /// Sets the value of the label.
+    /// Sets the text of the label.
     ///
     /// This method will automatically determine the direction of the animation based on the old and new text. Depending
-    /// on how the value is formatted, the animation direction might not be always correct. In that case, use `setValue(_:animated:direction:)`.
+    /// on how the text is formatted, the animation direction might not be always correct. In that case, use `setText(_:animated:direction:)`.
     ///
     /// - Parameters:
-    ///   - newValue: The new value.
+    ///   - newText: The new text.
     ///   - animated: Whether to animate the change or not.
-    public func setValue(_ newValue: String?, animated: Bool) {
-        let direction: Direction = (newValue ?? "") >= (internalValue ?? "")
+    public func setText(_ newText: String?, animated: Bool) {
+        let direction: Direction = (newText ?? "") >= (internalText ?? "")
             ? .increment
             : .decrement
 
-        setValue(newValue, animated: animated, direction: direction)
+        setText(newText, animated: animated, direction: direction)
     }
 
-    /// Sets the value of the label.
+    /// Sets the text of the label.
     ///
     /// - Parameters:
-    ///   - newValue: The new value.
+    ///   - newText: The new text.
     ///   - animated: Whether to animate the change or not.
     ///   - direction: The direction of the animation.
-    public func setValue(_ newValue: String?, animated: Bool, direction: Direction) {
-        guard newValue != internalValue else { return }
-        updateContent(from: internalValue ?? "", to: newValue ?? "", animated: animated, direction: direction)
-        internalValue = newValue
+    public func setText(_ newText: String?, animated: Bool, direction: Direction) {
+        guard newText != internalText else { return }
+        updateContent(from: internalText ?? "", to: newText ?? "", animated: animated, direction: direction)
+        internalText = newText
     }
 
     public override func layoutSubviews() {
@@ -169,15 +169,15 @@ public class RotatingLabel: UIView {
 extension RotatingLabel {
     // swiftlint:disable:next function_body_length
     private func updateContent(
-        from oldValue: String,
-        to newValue: String,
+        from oldText: String,
+        to newText: String,
         animated: Bool,
         direction: Direction
     ) {
         var toBeRemoved: [UILabel] = []
         var newLabels: [UILabel] = []
 
-        let diff = diffingFunction(from: oldValue, to: newValue)
+        let diff = diffingFunction(from: oldText, to: newText)
         for operation in diff {
             switch operation {
             case .remove(offset: let offset, element: _):
