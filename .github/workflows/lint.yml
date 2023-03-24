@@ -1,0 +1,16 @@
+name: Lint
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/lint.yml'
+      - '.swiftlint.yml'
+      - '**/*.swift'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict
