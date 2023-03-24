@@ -20,9 +20,7 @@ public class RotatingLabel: UIView {
     /// Text color.
     public var textColor: UIColor = .label {
         didSet {
-            for label in labels {
-                label.textColor = textColor
-            }
+            updateTextColor()
         }
     }
 
@@ -35,22 +33,14 @@ public class RotatingLabel: UIView {
     /// Font to use for rendering the text.
     public var font: UIFont? {
         didSet {
-            for label in labels {
-                label.font = font
-            }
-
-            invalidateIntrinsicContentSize()
+            updateFont()
         }
     }
 
     /// A Boolean that indicates whether the label automatically updates its font when the device’s content size category changes.
     public var adjustsFontForContentSizeCategory: Bool = false {
         didSet {
-            for label in labels {
-                label.adjustsFontForContentSizeCategory = adjustsFontForContentSizeCategory
-            }
-
-            invalidateIntrinsicContentSize()
+            updateContentSizeCategoryAdjustmentPreference()
         }
     }
 
@@ -264,5 +254,31 @@ extension RotatingLabel {
         }
 
         return result
+    }
+}
+
+// MARK: - Appearance
+
+extension RotatingLabel {
+    private func updateFont() {
+        for label in labels {
+            label.font = font
+        }
+
+        invalidateIntrinsicContentSize()
+    }
+
+    private func updateTextColor() {
+        for label in labels {
+            label.textColor = textColor
+        }
+    }
+
+    private func updateContentSizeCategoryAdjustmentPreference() {
+        for label in labels {
+            label.adjustsFontForContentSizeCategory = adjustsFontForContentSizeCategory
+        }
+
+        invalidateIntrinsicContentSize()
     }
 }
