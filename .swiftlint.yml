@@ -1,6 +1,9 @@
 opt_in_rules:
   - missing_docs
 
+excluded:
+  - .build
+
 line_length:
   warning: 130
   error: 150
