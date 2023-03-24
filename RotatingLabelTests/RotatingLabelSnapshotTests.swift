@@ -13,19 +13,19 @@ final class RotatingLabelSnapshotTests: XCTestCase {
 
     func test_default() {
         let sut = makeSUT()
-        sut.text = "$1399.99"
+        sut.text = "$399.99"
         assertSnapshot(matching: sut, as: .image)
     }
 
     func test_darkMode() {
         let sut = makeSUT()
-        sut.text = "$1399.99"
+        sut.text = "$399.99"
         assertSnapshot(matching: sut, as: .image(traits: .init(userInterfaceStyle: .dark)))
     }
 
     func test_largeFont() {
         let sut = makeSUT()
-        sut.text = "$1399.99"
+        sut.text = "$399.99"
         sut.font = .preferredFont(forTextStyle: .body)
         sut.adjustsFontForContentSizeCategory = true
         assertSnapshot(matching: sut, as: .image(traits: .init(preferredContentSizeCategory: .extraExtraExtraLarge)))
@@ -33,7 +33,7 @@ final class RotatingLabelSnapshotTests: XCTestCase {
 
     func test_textColor() {
         let sut = makeSUT()
-        sut.text = "$1399.99"
+        sut.text = "$399.99"
         sut.textColor = .blue
         assertSnapshot(matching: sut, as: .image)
     }
