@@ -1,6 +1,6 @@
 # RotatingLabel
 
-RotatingLabel is a label that animates text changes by scrolling characters. The component was designed for presenting numeric values, such as account balances and stock prices, but it can be used for any text, although not ideal.
+RotatingLabel is a label that animates text changes by scrolling characters. The component is designed for presenting numeric values, such as account balances and stock prices, but it can be used for any text, although not ideal.
 
 ## Installation
 
@@ -10,11 +10,11 @@ To install RotatingLabel using [Swift Package Manager](https://github.com/apple/
 .package(url: "https://github.com/raymondjavaxx/RotatingLabel.git", from: "1.0.0")
 ```
 
-Or, follow the instructions on the *[Adding package dependencies to your app](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app)* guide.
+Or, follow the instructions on *[Adding package dependencies to your app](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app)* guide.
 
 ## Usage
 
-Usage is simple. Just create a RotatingLabel and set the text property to the value you want to display. When it is time to change the value, use the `setText(_:animated:)` method to animate the change.
+Usage is simple. Create a RotatingLabel and set the text property to the value you want to display. When it is time to change the value, use the `setText(_:animated:)` method to animate it.
 
 ```swift
 let label = RotatingLabel()
@@ -52,9 +52,9 @@ label.diffingFunction = DiffingFunction { oldValue, newValue in
 
 ### Dynamic Type
 
-RotatingLabel supports Dynamic Type. To enable it, set the `adjustsFontForContentSizeCategory` property to `true`. The label will automatically adjust its font size when the user changes the content size category.
+RotatingLabel supports Dynamic Type. The label can automatically adjust its font size when the user changes the content size category. To enable it, set the `adjustsFontForContentSizeCategory` property to `true`.
 
-Note: The font must support scaling for this to work. See [Scaling Fonts Automatically](https://developer.apple.com/documentation/uikit/uifont/scaling_fonts_automatically#3111283) for more information.
+**Note:** The font must support scaling for this to work. See [Scaling Fonts Automatically](https://developer.apple.com/documentation/uikit/uifont/scaling_fonts_automatically#3111283) for more information.
 
 ## License
 
