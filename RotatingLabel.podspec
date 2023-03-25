@@ -15,5 +15,5 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.7"
 
   spec.source       = { :git => "https://github.com/raymondjavaxx/RotatingLabel.git", :tag => "#{spec.version}" }
-  spec.source_files = "RotatingLabel/*.swift"
+  spec.source_files = "RotatingLabel/**/*.swift"
 end
