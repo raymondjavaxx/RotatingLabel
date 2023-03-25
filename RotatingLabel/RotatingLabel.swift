@@ -106,7 +106,7 @@ public class RotatingLabel: UIView {
         setup()
     }
 
-    func setup() {
+    private func setup() {
         isAccessibilityElement = true
         accessibilityTraits = .staticText
     }
