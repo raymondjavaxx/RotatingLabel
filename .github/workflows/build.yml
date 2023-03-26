@@ -13,39 +13,19 @@ on:
       - RotatingLabelTests/**/*
       - '**/*.swift'
 jobs:
-  build-ios:
+  build:
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:
           path: .build
-          key: ${{ runner.os }}-ios-${{ hashFiles('**/Package.resolved') }}
+          key: ${{ runner.os }}-build-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
-            ${{ runner.os }}-ios-
+            ${{ runner.os }}-build-
       - name: Build iOS
         run: make build_ios
-  build-tvos:
-    runs-on: macos-12
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/cache@v3
-        with:
-          path: .build
-          key: ${{ runner.os }}-tvos-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-tvos-
       - name: Build tvOS
-        run: make build_tvos
-  test:
-    runs-on: macos-12
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/cache@v3
-        with:
-          path: .build
-          key: ${{ runner.os }}-test-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-test-
+        run: make build_ios
       - name: Run tests
         run: make test
