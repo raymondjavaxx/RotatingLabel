@@ -20,9 +20,11 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: .build
-          key: ${{ runner.os }}-build-${{ hashFiles('**/Package.resolved') }}
+          key: ${{ runner.os }}-v2-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
-            ${{ runner.os }}-build-
+            ${{ runner.os }}-v2-
+      - name: Prep
+        run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
       - name: Build iOS
         run: make build_ios
       - name: Build tvOS
