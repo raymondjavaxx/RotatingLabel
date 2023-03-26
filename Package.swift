@@ -5,7 +5,8 @@ import PackageDescription
 let package = Package(
     name: "RotatingLabel",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v13),
+        .tvOS(.v13)
     ],
     products: [
         .library(
