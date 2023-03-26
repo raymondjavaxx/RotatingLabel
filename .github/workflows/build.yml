@@ -36,6 +36,6 @@ jobs:
       - name: Build iOS
         run: make build_ios
       - name: Build tvOS
-        run: make build_ios
+        run: make build_tvos
       - name: Run tests
         run: make test
