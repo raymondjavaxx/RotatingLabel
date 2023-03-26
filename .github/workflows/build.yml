@@ -17,13 +17,23 @@ jobs:
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v3
+      - name: Build iOS
+        run: make build
+  build-tvos:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build tvOS
+        run: make build_tvos
+  test:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:
           path: .build
           key: ${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-
-      - name: Build
-        run: make build
       - name: Run tests
         run: make test
