@@ -16,7 +16,14 @@ jobs:
   build:
     runs-on: macos-12
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout dist
+        uses: actions/checkout@v3
+        with:
+          ref: dist
+          # git-restore-mtime-bare uses the ref log to find the correct timestamp
+          # for each file. This requires a full git history. The default value (1)
+          # creates a shallow checkout.
+          fetch-depth: 0
       - name: restore timestamps
         uses: chetan/git-restore-mtime-action@v2
       - uses: actions/cache@v3
