@@ -16,6 +16,8 @@ jobs:
   build:
     runs-on: macos-12
     steps:
+      - name: Prep
+        run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:
@@ -23,8 +25,6 @@ jobs:
           key: ${{ runner.os }}-v2-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-v2-
-      - name: Prep
-        run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
       - name: Build iOS
         run: make build_ios
       - name: Build tvOS
