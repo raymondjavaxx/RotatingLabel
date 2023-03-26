@@ -17,12 +17,24 @@ jobs:
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: .build
+          key: ${{ runner.os }}-ios-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-ios-
       - name: Build iOS
         run: make build_ios
   build-tvos:
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: .build
+          key: ${{ runner.os }}-tvos-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-tvos-
       - name: Build tvOS
         run: make build_tvos
   test:
@@ -32,8 +44,8 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: .build
-          key: ${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
+          key: ${{ runner.os }}-test-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
-            ${{ runner.os }}-
+            ${{ runner.os }}-test-
       - name: Run tests
         run: make test
