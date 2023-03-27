@@ -36,7 +36,7 @@ jobs:
         run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
       - name: Build iOS
         run: make build_ios
-      - name: Build tvOS
-        run: make build_tvos
       - name: Run tests
         run: make test
+      - name: Build tvOS
+        run: make build_tvos
