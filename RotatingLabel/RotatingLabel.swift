@@ -157,6 +157,14 @@ public class RotatingLabel: UIView {
 }
 
 extension RotatingLabel {
+    private static var defaultFontSize: CGFloat {
+#if os(tvOS)
+        return 16
+#else
+        return UIFont.labelFontSize
+#endif
+    }
+
     // swiftlint:disable:next function_body_length
     private func updateContent(
         from oldText: String,
@@ -189,7 +197,7 @@ extension RotatingLabel {
         if animated {
             let frames = calculateFrames()
 
-            let translationOffset = font?.pointSize ?? UIFont.labelFontSize
+            let translationOffset = font?.pointSize ?? Self.defaultFontSize
 
             newLabels.forEach { label in
                 label.frame = frames[ObjectIdentifier(label), default: label.frame]
