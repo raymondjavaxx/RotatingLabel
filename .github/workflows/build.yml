@@ -17,21 +17,21 @@ jobs:
     timeout-minutes: 15
     runs-on: macos-12
     steps:
-      - name: checkout dist
+      - name: Checkout source
         uses: actions/checkout@v3
         with:
           # git-restore-mtime-bare uses the ref log to find the correct timestamp
           # for each file. This requires a full git history. The default value (1)
           # creates a shallow checkout.
           fetch-depth: 0
-      - name: restore timestamps
+      - name: Restore timestamps
         uses: chetan/git-restore-mtime-action@v2
       - uses: actions/cache@v3
         with:
           path: .build
-          key: ${{ runner.os }}-v3-${{ hashFiles('**/Package.resolved') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
-            ${{ runner.os }}-v3-
+            ${{ runner.os }}-
       - name: Prep
         run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
       - name: Build iOS
