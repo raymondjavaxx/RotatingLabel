@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "RotatingLabel"
-  spec.version      = "1.0.0"
+  spec.version      = "1.1.0"
   spec.summary      = "A label that animates text changes by scrolling characters."
 
   spec.description  = <<-DESC
@@ -11,8 +11,9 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Ramon Torres" => "raymondjavaxx@gmail.com" }
 
-  spec.platform     = :ios, "13.0"
   spec.swift_version = "5.7"
+  spec.ios.deployment_target = "13.0"
+  spec.tvos.deployment_target = "13.0"
 
   spec.source       = { :git => "https://github.com/raymondjavaxx/RotatingLabel.git", :tag => "#{spec.version}" }
   spec.source_files = "RotatingLabel/**/*.swift"
