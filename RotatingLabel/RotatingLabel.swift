@@ -31,7 +31,7 @@ public class RotatingLabel: UIView {
     public var decrementingColor: UIColor = .systemRed
 
     /// Font to use for rendering the text.
-    public var font: UIFont = getDefaultFont() {
+    public var font: UIFont = defaultFont() {
         didSet {
             updateFont()
         }
@@ -157,7 +157,7 @@ public class RotatingLabel: UIView {
 }
 
 extension RotatingLabel {
-    private static func getDefaultFont() -> UIFont {
+    private static func defaultFont() -> UIFont {
 #if os(tvOS)
         // On tvOS, `UILabel.font` defaults to the `.headline` text style.
         return .preferredFont(forTextStyle: .headline)
