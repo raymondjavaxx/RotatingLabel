@@ -10,6 +10,13 @@ import RotatingLabel
 
 final class RotatingLabelTests: XCTestCase {
 
+    func test_font_shouldMatchSystemDefault() {
+        let sut = makeSUT()
+        let systemLabel = UILabel()
+        XCTAssertEqual(sut.font, systemLabel.font)
+        XCTAssertEqual(sut.font.fontDescriptor, systemLabel.font.fontDescriptor)
+    }
+
     func test_value_shouldSetAccessibilityLabel() {
         let sut = makeSUT()
         sut.text = "$250.00"

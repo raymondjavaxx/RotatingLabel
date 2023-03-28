@@ -31,7 +31,7 @@ public class RotatingLabel: UIView {
     public var decrementingColor: UIColor = .systemRed
 
     /// Font to use for rendering the text.
-    public var font: UIFont? {
+    public var font: UIFont = getDefaultFont() {
         didSet {
             updateFont()
         }
@@ -157,11 +157,13 @@ public class RotatingLabel: UIView {
 }
 
 extension RotatingLabel {
-    private static var defaultFontSize: CGFloat {
+    private static func getDefaultFont() -> UIFont {
 #if os(tvOS)
-        return 16
+        // On tvOS, `UILabel.font` defaults to the `.headline` text style.
+        return .preferredFont(forTextStyle: .headline)
 #else
-        return UIFont.labelFontSize
+        // On iOS, `UILabel.font` defaults to a fixed-size font.
+        return .systemFont(ofSize: UIFont.labelFontSize)
 #endif
     }
 
@@ -197,7 +199,7 @@ extension RotatingLabel {
         if animated {
             let frames = calculateFrames()
 
-            let translationOffset = font?.pointSize ?? Self.defaultFontSize
+            let translationOffset = font.pointSize
 
             newLabels.forEach { label in
                 label.frame = frames[ObjectIdentifier(label), default: label.frame]
