@@ -26,7 +26,7 @@ final class DemoViewController: UIViewController {
 
         let button = UIButton(configuration: configuration)
         button.setTitle("Update", for: [])
-        button.addTarget(self, action: #selector(updateTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(updateTapped(_:)), for: .primaryActionTriggered)
         return button
     }()
 

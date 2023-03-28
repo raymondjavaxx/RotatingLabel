@@ -7,61 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F68D39F629C2DA7D00EDB5BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D39F529C2DA7D00EDB5BA /* AppDelegate.swift */; };
-		F68D39F829C2DA7D00EDB5BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D39F729C2DA7D00EDB5BA /* SceneDelegate.swift */; };
-		F68D39FA29C2DA7D00EDB5BA /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D39F929C2DA7D00EDB5BA /* DemoViewController.swift */; };
-		F68D39FF29C2DA7E00EDB5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68D39FE29C2DA7E00EDB5BA /* Assets.xcassets */; };
-		F68D3A0229C2DA7E00EDB5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68D3A0029C2DA7E00EDB5BA /* LaunchScreen.storyboard */; };
 		F68D3A2A29C3D84C00EDB5BA /* DiffingFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */; };
 		F6B43F3829CD1FA9008A771B /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = F6B43F3729CD1FA9008A771B /* SnapshotTesting */; };
 		F6B43F3A29CD1FD0008A771B /* RotatingLabelSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B43F3929CD1FD0008A771B /* RotatingLabelSnapshotTests.swift */; };
 		F6B46CBE29CCCF210052593C /* RotatingLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B46CBD29CCCF210052593C /* RotatingLabelTests.swift */; };
 		F6FF473A29CB858D006940E5 /* RotatingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F6FF473929CB858D006940E5 /* RotatingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6FF473D29CB858D006940E5 /* RotatingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FF473729CB858D006940E5 /* RotatingLabel.framework */; };
-		F6FF473E29CB858D006940E5 /* RotatingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6FF473729CB858D006940E5 /* RotatingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6FF474329CB8597006940E5 /* DiffingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D3A2B29C3E1B500EDB5BA /* DiffingFunction.swift */; };
 		F6FF474429CB8597006940E5 /* RotatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D3A2529C2DAA300EDB5BA /* RotatingLabel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F68D3A0929C2DA7E00EDB5BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F68D39EA29C2DA7D00EDB5BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F68D39F129C2DA7D00EDB5BA;
-			remoteInfo = RotatingLabel;
-		};
-		F6FF473B29CB858D006940E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F68D39EA29C2DA7D00EDB5BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F6FF473629CB858D006940E5;
-			remoteInfo = RotatingLabel;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6FF474229CB858D006940E5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6FF473E29CB858D006940E5 /* RotatingLabel.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		F68D39F229C2DA7D00EDB5BA /* RotatingLabelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotatingLabelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F68D39F529C2DA7D00EDB5BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F68D39F729C2DA7D00EDB5BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F68D39F929C2DA7D00EDB5BA /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
-		F68D39FE29C2DA7E00EDB5BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F68D3A0129C2DA7E00EDB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F68D3A0329C2DA7E00EDB5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68D3A0829C2DA7E00EDB5BA /* RotatingLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotatingLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68D3A2529C2DAA300EDB5BA /* RotatingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingLabel.swift; sourceTree = "<group>"; };
 		F68D3A2929C3D84C00EDB5BA /* DiffingFunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffingFunctionTests.swift; sourceTree = "<group>"; };
@@ -73,14 +28,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F68D39EF29C2DA7D00EDB5BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F6FF473D29CB858D006940E5 /* RotatingLabel.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F68D3A0529C2DA7E00EDB5BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,7 +51,6 @@
 			children = (
 				F6FF473829CB858D006940E5 /* RotatingLabel */,
 				F68D3A0B29C2DA7E00EDB5BA /* RotatingLabelTests */,
-				F68D39F429C2DA7D00EDB5BA /* RotatingLabelDemo */,
 				F68D39F329C2DA7D00EDB5BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,24 +58,10 @@
 		F68D39F329C2DA7D00EDB5BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F68D39F229C2DA7D00EDB5BA /* RotatingLabelDemo.app */,
 				F68D3A0829C2DA7E00EDB5BA /* RotatingLabelTests.xctest */,
 				F6FF473729CB858D006940E5 /* RotatingLabel.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F68D39F429C2DA7D00EDB5BA /* RotatingLabelDemo */ = {
-			isa = PBXGroup;
-			children = (
-				F68D39F529C2DA7D00EDB5BA /* AppDelegate.swift */,
-				F68D39F729C2DA7D00EDB5BA /* SceneDelegate.swift */,
-				F68D39F929C2DA7D00EDB5BA /* DemoViewController.swift */,
-				F68D39FE29C2DA7E00EDB5BA /* Assets.xcassets */,
-				F68D3A0029C2DA7E00EDB5BA /* LaunchScreen.storyboard */,
-				F68D3A0329C2DA7E00EDB5BA /* Info.plist */,
-			);
-			path = RotatingLabelDemo;
 			sourceTree = "<group>";
 		};
 		F68D3A0B29C2DA7E00EDB5BA /* RotatingLabelTests */ = {
@@ -166,25 +98,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F68D39F129C2DA7D00EDB5BA /* RotatingLabelDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F68D3A1C29C2DA7E00EDB5BA /* Build configuration list for PBXNativeTarget "RotatingLabelDemo" */;
-			buildPhases = (
-				F68D39EE29C2DA7D00EDB5BA /* Sources */,
-				F68D39EF29C2DA7D00EDB5BA /* Frameworks */,
-				F68D39F029C2DA7D00EDB5BA /* Resources */,
-				F6FF474229CB858D006940E5 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F6FF473C29CB858D006940E5 /* PBXTargetDependency */,
-			);
-			name = RotatingLabelDemo;
-			productName = RotatingLabel;
-			productReference = F68D39F229C2DA7D00EDB5BA /* RotatingLabelDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 		F68D3A0729C2DA7E00EDB5BA /* RotatingLabelTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F68D3A1F29C2DA7E00EDB5BA /* Build configuration list for PBXNativeTarget "RotatingLabelTests" */;
@@ -196,7 +109,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F68D3A0A29C2DA7E00EDB5BA /* PBXTargetDependency */,
 			);
 			name = RotatingLabelTests;
 			packageProductDependencies = (
@@ -234,9 +146,6 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					F68D39F129C2DA7D00EDB5BA = {
-						CreatedOnToolsVersion = 14.2;
-					};
 					F68D3A0729C2DA7E00EDB5BA = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -261,23 +170,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F68D39F129C2DA7D00EDB5BA /* RotatingLabelDemo */,
-				F68D3A0729C2DA7E00EDB5BA /* RotatingLabelTests */,
 				F6FF473629CB858D006940E5 /* RotatingLabel */,
+				F68D3A0729C2DA7E00EDB5BA /* RotatingLabelTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F68D39F029C2DA7D00EDB5BA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F68D3A0229C2DA7E00EDB5BA /* LaunchScreen.storyboard in Resources */,
-				F68D39FF29C2DA7E00EDB5BA /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F68D3A0629C2DA7E00EDB5BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,16 +194,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F68D39EE29C2DA7D00EDB5BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F68D39FA29C2DA7D00EDB5BA /* DemoViewController.swift in Sources */,
-				F68D39F629C2DA7D00EDB5BA /* AppDelegate.swift in Sources */,
-				F68D39F829C2DA7D00EDB5BA /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F68D3A0429C2DA7E00EDB5BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,30 +214,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F68D3A0A29C2DA7E00EDB5BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F68D39F129C2DA7D00EDB5BA /* RotatingLabelDemo */;
-			targetProxy = F68D3A0929C2DA7E00EDB5BA /* PBXContainerItemProxy */;
-		};
-		F6FF473C29CB858D006940E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F6FF473629CB858D006940E5 /* RotatingLabel */;
-			targetProxy = F6FF473B29CB858D006940E5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F68D3A0029C2DA7E00EDB5BA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F68D3A0129C2DA7E00EDB5BA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F68D3A1A29C2DA7E00EDB5BA /* Debug */ = {
@@ -465,68 +330,9 @@
 			};
 			name = Release;
 		};
-		F68D3A1D29C2DA7E00EDB5BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X428R7H82B;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RotatingLabelDemo/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabelDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F68D3A1E29C2DA7E00EDB5BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X428R7H82B;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RotatingLabelDemo/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.rtorres.RotatingLabelDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		F68D3A2029C2DA7E00EDB5BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X428R7H82B;
@@ -544,7 +350,6 @@
 		F68D3A2129C2DA7E00EDB5BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X428R7H82B;
@@ -637,15 +442,6 @@
 			buildConfigurations = (
 				F68D3A1A29C2DA7E00EDB5BA /* Debug */,
 				F68D3A1B29C2DA7E00EDB5BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F68D3A1C29C2DA7E00EDB5BA /* Build configuration list for PBXNativeTarget "RotatingLabelDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F68D3A1D29C2DA7E00EDB5BA /* Debug */,
-				F68D3A1E29C2DA7E00EDB5BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
