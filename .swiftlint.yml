@@ -43,6 +43,11 @@ line_length:
   ignores_urls: true
   ignores_comments: true
 
+implicit_return:
+  included:
+    - closure
+    - getter
+
 identifier_name:
   excluded:
     - x
