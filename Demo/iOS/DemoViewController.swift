@@ -5,8 +5,8 @@
 //  Created by Ramon Torres on 3/16/23.
 //
 
-import RotatingLabel
 import UIKit
+import RotatingLabel
 
 final class DemoViewController: UIViewController {
 
