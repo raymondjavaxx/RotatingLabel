@@ -42,6 +42,6 @@ final class RotatingLabelSnapshotTests: XCTestCase {
 
 private extension RotatingLabelSnapshotTests {
     func makeSUT() -> RotatingLabel {
-        return RotatingLabel()
+        RotatingLabel()
     }
 }

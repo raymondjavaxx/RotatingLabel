@@ -85,7 +85,7 @@ public class RotatingLabel: UIView {
     }
 
     public override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return intrinsicContentSize
+        intrinsicContentSize
     }
 
     private var internalText: String? {

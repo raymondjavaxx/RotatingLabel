@@ -30,7 +30,7 @@ public struct DiffingFunction {
     ///   - newValue: New value.
     /// - Returns: The difference between old value and new value.
     public func callAsFunction(from oldValue: String, to newValue: String) -> [Operation] {
-        return self.diff(oldValue, newValue)
+        self.diff(oldValue, newValue)
     }
 }
 
