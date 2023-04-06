@@ -1,4 +1,4 @@
-.PHONY: all build build_ios build_tvos test lint format
+.PHONY: all build build_ios build_tvos build_docs test lint format
 
 all: lint format build test
 
@@ -18,6 +18,13 @@ build_tvos:
 		-destination 'platform=tvOS Simulator,name=Apple TV,OS=latest'\
 		-scheme 'RotatingLabel'\
 		-derivedDataPath '.build/derivedData'\
+		| xcpretty
+
+build_docs:
+	xcodebuild docbuild\
+		-scheme 'RotatingLabel'\
+		-derivedDataPath '.build/derivedData'\
+		-destination generic/platform=iOS\
 		| xcpretty
 
 test:
