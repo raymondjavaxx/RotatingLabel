@@ -18,6 +18,8 @@ public class RotatingLabel: UIView {
     }
 
     /// Text color.
+    ///
+    /// Defaults to `UIColor.label`.
     public var textColor: UIColor = .label {
         didSet {
             updateTextColor()
@@ -25,9 +27,13 @@ public class RotatingLabel: UIView {
     }
 
     /// Color to flash when values increase.
+    ///
+    /// Defaults to `UIColor.systemGreen`.
     public var incrementingColor: UIColor = .systemGreen
 
     /// Color to flash when values decrease.
+    ///
+    /// Defaults to `UIColor.systemRed`.
     public var decrementingColor: UIColor = .systemRed
 
     /// Font to use for rendering the text.
