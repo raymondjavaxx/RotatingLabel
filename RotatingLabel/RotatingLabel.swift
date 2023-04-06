@@ -44,6 +44,12 @@ public class RotatingLabel: UIView {
     }
 
     /// A Boolean that indicates whether the label automatically updates its font when the device’s content size category changes.
+    ///
+    /// For this property to have any effect, the label's font must be set to a font
+    /// that is compatible with Dynamic Type. For more information, see
+    /// [Scaling Fonts Automatically](https://developer.apple.com/documentation/uikit/uifont/scaling_fonts_automatically#3111283).
+    ///
+    /// Defaults to `false`.
     public var adjustsFontForContentSizeCategory: Bool = false {
         didSet {
             updateContentSizeCategoryAdjustmentPreference()
@@ -51,6 +57,8 @@ public class RotatingLabel: UIView {
     }
 
     /// Function to use for diffing the old and new values.
+    ///
+    /// Defaults to `DiffingFunction.default`.
     public var diffingFunction: DiffingFunction = .default
 
     /// The current text.
