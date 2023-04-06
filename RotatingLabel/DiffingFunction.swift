@@ -9,7 +9,9 @@
 public struct DiffingFunction {
     /// Operation that can be performed on a string.
     public enum Operation: Equatable {
+        /// Insert a character at the given offset.
         case insert(offset: Int, element: Character)
+        /// Remove a character at the given offset.
         case remove(offset: Int, element: Character)
     }
 
